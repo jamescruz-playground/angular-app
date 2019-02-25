@@ -1,0 +1,20 @@
+<div class="header display-flex flex-align-center">
+  <div class="company-logo">
+    <img src="/assets/images/google-account-logo.png" />
+  </div>
+</div>
+
+<div class="grid-justify">
+  <div class="side-container fixed">
+    <app-side-bar [lists]="navigation"></app-side-bar>
+  </div>
+  <div class="main-container">
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!--<div class="right-side-container">-->
+    <!--&nbsp;-->
+  <!--</div>-->
+</div>
+<div class="clearer">&nbsp;</div>
