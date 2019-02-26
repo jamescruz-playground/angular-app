@@ -155,14 +155,21 @@ a.nav-list.active {
   z-index:2;
 }
 
-.nav-list span:hover {
+a.nav-list:hover {
   position: relative;
-  background: #ccc;
+  background: #f5f5f5;
   border-radius: 0 25px 25px 0;
   margin-left:-28px;
   padding-left:28px;
-  opacity: .3;
   z-index:1;
+}
+
+a.nav-list:active:hover {
+  background: #e0e0e0;
+}
+
+a.nav-list.active:hover {
+  background: #e4eefe;
 }
 
 .icon-container {
@@ -186,8 +193,8 @@ ul.main-items {
   margin:0;
 }
 
-li.fourty-percent {
-  width:38.9%;
+li.two-cols {
+  width:45%;
 }
 
 li.eighty-percent {
@@ -297,8 +304,8 @@ a.box-link:hover {
     width:100%;
   }
 
-  li.box-display.fourty-percent {
-    width: 80%;
+  li.box-display.two-cols {
+    width: 95%;
   }
 }
 
@@ -330,8 +337,8 @@ a.box-link:hover {
     width:100%;
   }
 
-  li.box-display.fourty-percent {
-    width: 83%;
+  li.box-display.two-cols {
+    width: 95%;
   }
 
   .grid-justify {
@@ -364,6 +371,19 @@ a.box-link:hover {
     border-bottom:2px solid #1a73e8;
   }
 
+  a.nav-list.active:hover {
+    background:none;
+  }
+
+  a.nav-list:active:hover {
+    background:none;
+  }
+
+  a.nav-list:hover {
+    color: #1a73e8;
+    background: none;
+  }
+
   .nav-list span:hover {
     position: relative;
     background: #ccc;
@@ -382,8 +402,8 @@ a.box-link:hover {
     display:none;
   }
 
-  li.box-display.fourty-percent {
-    width: 38.9%;
+  li.box-display.two-cols {
+    width: 45%;
   }
 }
 
@@ -397,9 +417,9 @@ a.box-link:hover {
     z-index: 10;
   }
   
-  .big-icon {
-    display:none;
-  }
+  /*.big-icon {*/
+    /*display:none;*/
+  /*}*/
 
   .fixed {
     position: -webkit-sticky; /* Safari */
@@ -421,8 +441,8 @@ a.box-link:hover {
     width:100%;
   }
 
-  li.box-display.fourty-percent {
-    width: 83%;
+  li.box-display.two-cols {
+    width: 95%;
   }
 
   .grid-justify {
@@ -455,14 +475,17 @@ a.box-link:hover {
     border-bottom:2px solid #1a73e8;
   }
 
-  .nav-list span:hover {
-    position: relative;
-    background: #ccc;
-    border-radius: 0 25px 25px 0;
-    margin-left:-28px;
-    padding-left:28px;
-    opacity: .3;
-    z-index:1;
+  a.nav-list.active:hover {
+    background:none;
+  }
+
+  a.nav-list:active:hover {
+    background:none;
+  }
+
+  a.nav-list:hover {
+    color: #1a73e8;
+    background: none;
   }
 
   div.navigation-container a.nav-list {
@@ -473,8 +496,8 @@ a.box-link:hover {
     display:none;
   }
 
-  li.box-display.fourty-percent {
-    width:86%;
+  li.box-display.two-cols {
+    width:95%;
   }
 
   li.box-display.eighty-percent {

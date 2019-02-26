@@ -8,7 +8,8 @@
           <span class="box-content-title display-block">Review your privacy settings</span>
           <span class="box-sub-content display-block">Take the Privacy Checkup, a step-by-step guide that helps you choose your privacy settings</span>
         </span>
-        <img src="../../assets/ico/big-privacy-icon.png" class="big-icon" />
+        <img *ngIf="xlicon" src="../../assets/ico/big-privacy-icon.png" class="big-icon" />
+        <img *ngIf="ricon" src="../../assets/ico/small-privacy-icon.png" class="small-icon" />
       </div>
     </li>
     <li class="box-display eighty-percent">
@@ -20,7 +21,7 @@
         <img src="../../assets/ico/big-account-icon.png" class="big-icon" />
       </div>
     </li>
-    <li class="box-display fourty-percent  display-grid-temp">
+    <li class="box-display two-cols  display-grid-temp">
       <div class="box-display-grid">
         <span class="box-content float-left">
           <span class="box-content-title display-block">Activity and timeline</span>
@@ -30,7 +31,7 @@
       </div>
       <a href="#" class="box-link display-block">Get Started</a>
     </li>
-    <li class="box-display fourty-percent  display-grid-temp">
+    <li class="box-display two-cols  display-grid-temp">
       <div class="box-display-grid">
         <span class="box-content float-left">
           <span class="box-content-title display-block">Things you create and do</span>

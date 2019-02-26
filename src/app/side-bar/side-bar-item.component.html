@@ -1,6 +1,6 @@
 <div class="navigation-container">
   <a class="nav-list display-flex flex-align-center"
-     [ngClass]="{ active: isActive() }"
+     [ngClass]="{active: isActive()}"
      [routerLink]="[list.path]">
      <span></span>
      <div class="menu-icon-container float-left icon-container display-flex flex-align-center"><img src="{{isActive() ? list.activeicon : list.icon}}" class="menu-icon" /></div>

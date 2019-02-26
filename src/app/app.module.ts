@@ -21,7 +21,7 @@ export const navigation: NavigationModel[] = [
 ];
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
   { path: 'personal_info', component: PersonalInfoComponent, pathMatch: 'full' },
   { path: 'data_and_personalization', component: DataAndPersonalizationComponent, pathMatch: 'full' },
