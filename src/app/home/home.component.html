@@ -9,7 +9,8 @@
           <span class="box-content-title display-block">Review your privacy settings</span>
           <span class="box-sub-content display-block">Take the Privacy Checkup, a step-by-step guide that helps you choose your privacy settings.</span>
         </span>
-        <img src="../../assets/ico/small-privacy-icon.png" class="small-icon" />
+        <img *ngIf="ricon" src="../../assets/ico/small-privacy-icon.png" class="small-icon" />
+        <img *ngIf="xlicon" src="../../assets/ico/big-privacy-icon.png" class="big-icon" />
       </div>
       <a href="#" class="box-link display-block">Get Started</a>
     </li>
@@ -19,7 +20,8 @@
           <span class="box-content-title display-block">Security issues found</span>
           <span class="box-sub-content display-block">Protect your account now by resolving these issues.</span>
         </span>
-        <img src="../../assets/ico/small-security-icon.png" class="small-icon" />
+        <img *ngIf="ricon" src="../../assets/ico/small-security-icon.png" class="small-icon" />
+        <img *ngIf="xlicon" src="../../assets/ico/big-security-icon.png" class="big-icon" />
       </div>
       <a href="#" class="box-link display-block">Secure Account</a>
     </li>
@@ -29,7 +31,8 @@
           <span class="box-content-title display-block">Make Google yours</span>
           <span class="box-sub-content display-block">See the data in your Google Account and choose what activity is saved to personalize your Google experience</span>
         </span>
-        <img src="../../assets/ico/small-personalize-icon.png" class="small-icon" />
+        <img *ngIf="ricon" src="../../assets/ico/small-personalize-icon.png" class="small-icon" />
+        <img *ngIf="xlicon" src="../../assets/ico/big-personal-icon.png" class="big-icon" />
         <div class="clearer">&nbsp;</div>
       </div>
       <a href="#" class="box-link display-block">Manage your data &amp; personalization</a>
@@ -40,7 +43,8 @@
           <span class="box-content-title display-block">Account storage</span>
           <span class="box-sub-content display-block">Your account storage is shared across Google services, like Gmail and Photos.</span>
         </span>
-        <img src="../../assets/ico/small-account-icon.png" class="small-icon" />
+        <img *ngIf="ricon" src="../../assets/ico/small-account-icon.png" class="small-icon" />
+        <img *ngIf="xlicon" src="../../assets/ico/big-account-icon.png" class="big-icon" />
         <div class="clearer">&nbsp;</div>
       </div>
       <a href="#" class="box-link display-block">Manage storage</a>

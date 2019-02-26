@@ -1,6 +1,8 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, HostListener} from '@angular/core';
 import {Router} from '@angular/router';
 import {NavigationModel} from './navigation.model';
+
+
 
 @Component({
   selector: 'app-root',
@@ -9,8 +11,12 @@ import {NavigationModel} from './navigation.model';
 })
 export class AppComponent {
 
+
   constructor(
     private router: Router,
     @Inject('NavigationModels') public navigation: NavigationModel[]) {
   }
+
+
+
 }
