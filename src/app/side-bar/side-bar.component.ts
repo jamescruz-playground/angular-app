@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NavigationModel } from '../navigation.model';
+import { NavigationModel } from '../../model/navigation.model';
 
 @Component({
   selector: 'app-side-bar',

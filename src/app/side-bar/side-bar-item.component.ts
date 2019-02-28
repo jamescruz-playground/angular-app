@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NavigationModel } from '../navigation.model';
+import { NavigationModel } from '../../model/navigation.model';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 

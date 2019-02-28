@@ -1,4 +1,4 @@
- import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes, Router } from '@angular/router';
@@ -12,7 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { DataAndPersonalizationComponent } from './data-and-personalization/data-and-personalization.component';
 
-import { NavigationModel } from './navigation.model';
+import { NavigationModel } from '../model/navigation.model';
+import {ContentBoxComponent, ContentBoxModule} from "../../lib/content-box";
 
 export const navigation: NavigationModel[] = [
   {icon: '/assets/ico/home.png', activeicon: '/assets/ico/home-active.png', label: 'Home', name: 'Root', path: 'home', component: HomeComponent },
@@ -40,7 +41,8 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    ContentBoxModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

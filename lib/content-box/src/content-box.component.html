@@ -1,0 +1,11 @@
+<div class="display-grid-temp">
+    <div class="box-display-grid">
+            <span class="box-content float-left">
+              <span class="box-content-title display-block">{{content.title}}</span>
+              <span class="box-sub-content display-block">{{content.content}}</span>
+            </span>
+      <img *ngIf="ricon" src="{{content.ricon}}" class="small-icon" />
+      <img *ngIf="xlicon" src="{{content.xlicon}}" class="big-icon" />
+    </div>
+    <a href="#" class="box-link display-block">{{content.link}}</a>
+</div>

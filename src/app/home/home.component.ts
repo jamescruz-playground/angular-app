@@ -1,10 +1,6 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-
-const TABLET_SCREEN_WIDTH = 1070;
-const TABLET_SCREEN_WIDTH_B = 1023;
-const MOBILE_SCREEN_WIDTH = 742;
-const MOBILE_SCREEN_WIDTH_B = 600;
-
+import {Component, Inject, Input, OnInit} from '@angular/core';
+import {ContentBoxModel} from "../../model/content-box.model";
+import {ContentBoxProperties} from "../../../lib/content-box/src/content-box.properties";
 
 @Component({
   selector: 'app-home',
@@ -12,32 +8,48 @@ const MOBILE_SCREEN_WIDTH_B = 600;
   styleUrls: ['../app.component.css']
 })
 export class HomeComponent implements OnInit {
-  xlicon: boolean;
-  ricon: boolean;
-  screenHeight: any;
-  screenWidth: any;
+    public content: ContentBoxProperties[];
 
-  constructor() {
-    this.xlicon = false;
-    this.ricon = true;
+    constructor(
+
+    ) {
+    this.content = [
+      {
+        title: 'Review your privacy settings',
+        content: 'Take the Privacy Checkup, a step-by-step guide that helps you choose your privacy settings.',
+        ricon: '../../assets/ico/small-privacy-icon.png',
+        xlicon: '../../assets/ico/big-privacy-icon.png',
+        link: 'Get Started'
+      },
+      {
+        title: 'Security issues found',
+        content: 'Protect your account now by resolving these issues.',
+        ricon: '../../assets/ico/small-security-icon.png',
+        xlicon: '../../assets/ico/big-security-icon.png',
+        link: 'Secure Account'
+      },
+      {
+        title: 'Make Google yours',
+        content: 'See the data in your Google Account and choose what activity is saved to personalize your Google experience',
+        ricon: '../../assets/ico/small-personalize-icon.png',
+        xlicon: '../../assets/ico/big-personal-icon.png',
+        link: 'Manage your data & personalization'
+      },
+      {
+        title: 'Account storage',
+        content: 'Your account storage is shared across Google services, like Gmail and Photos.',
+        ricon: '../../assets/ico/small-account-icon.png',
+        xlicon: '../../assets/ico/big-account-icon.png',
+        link: 'Manage storage'
+      }
+    ];
   }
 
-  @HostListener('window:resize', ['$resizeEvent'])
-  onResize(resizeEvent?) {
-    if ((window.innerWidth <= TABLET_SCREEN_WIDTH && window.innerWidth >= TABLET_SCREEN_WIDTH_B ) || (window.innerWidth <= MOBILE_SCREEN_WIDTH && window.innerWidth >= MOBILE_SCREEN_WIDTH_B)) {
-        this.ricon = false;
-        this.xlicon = true;
-    } else {
-        this.ricon = true;
-        this.xlicon = false;
-    }
-    this.screenHeight = window.innerHeight;
-    this.screenWidth = window.innerWidth;
+  getProperties(index: number): ContentBoxProperties {
+      return this.content[index];
   }
 
   ngOnInit() {
 
   }
-
-
 }
