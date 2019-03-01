@@ -4,5 +4,5 @@ export interface NavigationModel {
   label: string;
   name: string;
   path: string;
-  component: any;
+  component?: any;
 }

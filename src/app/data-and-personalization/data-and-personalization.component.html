@@ -3,43 +3,16 @@
   <span class="sub-content display-block center-text-content">Your data, activity, and preferences that help make Google services more useful to you</span>
   <ul class="main-items display-flex flex-justify-center wrap">
     <li class="box-display eighty-percent">
-      <div class="box-display-grid-big">
-        <span class="box-content float-left">
-          <span class="box-content-title display-block">Review your privacy settings</span>
-          <span class="box-sub-content display-block">Take the Privacy Checkup, a step-by-step guide that helps you choose your privacy settings</span>
-        </span>
-        <img *ngIf="xlicon" src="../../assets/ico/big-privacy-icon.png" class="big-icon" />
-        <img *ngIf="ricon" src="../../assets/ico/small-privacy-icon.png" class="small-icon" />
-      </div>
+      <content-box [content]="getProperties(0)"></content-box>
     </li>
     <li class="box-display eighty-percent">
-      <div class="box-display-grid-big">
-        <span class="box-content float-left">
-          <span class="box-content-title display-block">Activity controls</span>
-          <span class="box-sub-content display-block">You can choose to save your activity for better personalization across Google. Turn on or pause these settings at any time.</span>
-        </span>
-        <img src="../../assets/ico/big-account-icon.png" class="big-icon" />
-      </div>
+      <content-box [content]="getProperties(1)"></content-box>
     </li>
-    <li class="box-display two-cols  display-grid-temp">
-      <div class="box-display-grid">
-        <span class="box-content float-left">
-          <span class="box-content-title display-block">Activity and timeline</span>
-          <span class="box-sub-content display-block">You can choose to save your activity for better personalization across Google. Turn on or pause these settings at any time.</span>
-        </span>
-        <img src="../../assets/ico/small-privacy-icon.png" class="small-icon" />
-      </div>
-      <a href="#" class="box-link display-block">Get Started</a>
+    <li class="box-display two-cols">
+      <content-box [content]="getProperties(2)"></content-box>
     </li>
-    <li class="box-display two-cols  display-grid-temp">
-      <div class="box-display-grid">
-        <span class="box-content float-left">
-          <span class="box-content-title display-block">Things you create and do</span>
-          <span class="box-sub-content display-block">Check Google Dashboard to see a summary of your services and the data saved in your account</span>
-        </span>
-        <img src="../../assets/ico/small-personalize-icon.png" class="small-icon" />
-      </div>
-      <a href="#" class="box-link display-block">Get Started</a>
+    <li class="box-display two-cols">
+      <content-box [content]="getProperties(3)"></content-box>
     </li>
   </ul>
 </div>

@@ -1,6 +1,5 @@
-import {Component, HostListener, Input, OnInit} from '@angular/core';
+import {Component, HostListener, Input, OnInit, ViewChild} from '@angular/core';
 import { ContentBoxProperties } from "./content-box.properties";
-import {ContentBoxModel} from "../../../src/model/content-box.model";
 
 const TABLET_SCREEN_WIDTH = 1070;
 const TABLET_SCREEN_WIDTH_B = 1023;
@@ -14,6 +13,7 @@ const MOBILE_SCREEN_WIDTH_B = 600;
 })
 export class ContentBoxComponent implements OnInit {
   @Input() public content: ContentBoxProperties;
+  @ViewChild('box') box;
   xlicon: boolean;
   ricon: boolean;
   screenHeight: any;
@@ -22,10 +22,12 @@ export class ContentBoxComponent implements OnInit {
   ngOnInit() {
       this.xlicon = false;
       this.ricon = true;
+      this.onResize();
   }
 
   @HostListener('window:resize', ['$resizeEvent'])
   onResize(resizeEvent?) {
+      console.log(Math.ceil(this.box.nativeElement.clientWidth / window.innerWidth * 100)) ;
       if ((window.innerWidth <= TABLET_SCREEN_WIDTH && window.innerWidth >= TABLET_SCREEN_WIDTH_B ) || (window.innerWidth <= MOBILE_SCREEN_WIDTH && window.innerWidth >= MOBILE_SCREEN_WIDTH_B)) {
           this.ricon = false;
           this.xlicon = true;

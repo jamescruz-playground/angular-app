@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes, Router } from '@angular/router';
 import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,19 +12,14 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { DataAndPersonalizationComponent } from './data-and-personalization/data-and-personalization.component';
 
 import { NavigationModel } from '../model/navigation.model';
-import {ContentBoxComponent, ContentBoxModule} from "../../lib/content-box";
+import {ContentBoxModule} from "../../lib/content-box";
+import {MatProgressBarModule} from "@angular/material";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 export const navigation: NavigationModel[] = [
-  {icon: '/assets/ico/home.png', activeicon: '/assets/ico/home-active.png', label: 'Home', name: 'Root', path: 'home', component: HomeComponent },
-  {icon: '/assets/ico/person.png', activeicon: '/assets/ico/person-active.png', label: 'Personal Info', name: 'PersonalInfo', path: 'personal_info', component: PersonalInfoComponent },
-  {icon: '/assets/ico/data.png', activeicon: '/assets/ico/data-active.png', label: 'Data & Personalization', name: 'DataPersonalization', path: 'data_and_personalization', component: DataAndPersonalizationComponent },
-];
-
-const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, pathMatch: 'full' },
-  { path: 'personal_info', component: PersonalInfoComponent, pathMatch: 'full' },
-  { path: 'data_and_personalization', component: DataAndPersonalizationComponent, pathMatch: 'full' },
+    {icon: '/assets/ico/home.png', activeicon: '/assets/ico/home-active.png', label: 'Home', name: 'Root', path: 'home', component: HomeComponent },
+    {icon: '/assets/ico/person.png', activeicon: '/assets/ico/person-active.png', label: 'Personal Info', name: 'PersonalInfo', path: 'personal_info', component: PersonalInfoComponent },
+    {icon: '/assets/ico/data.png', activeicon: '/assets/ico/data-active.png', label: 'Data & Personalization', name: 'DataAndPersonalization', path: 'data_and_personalization', component: DataAndPersonalizationComponent },
 ];
 
 @NgModule({
@@ -33,16 +27,15 @@ const routes: Routes = [
     AppComponent,
     SideBarComponent,
     SideBarItemComponent,
-    HomeComponent,
-    PersonalInfoComponent,
-    DataAndPersonalizationComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ContentBoxModule,
-    RouterModule.forRoot(routes),
+    MatProgressBarModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

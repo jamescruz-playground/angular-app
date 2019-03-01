@@ -48,7 +48,10 @@ a:visited {
 .display-grid-temp {
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 59px;
+  border: 1px solid #d5d7db;
+  border-radius: 10px;
+  height:100%;
 }
 
 .display-block {
@@ -164,11 +167,11 @@ a.nav-list:hover {
   z-index:1;
 }
 
-a.nav-list:active:hover {
+a.nav-list:active {
   background: #e0e0e0;
 }
 
-a.nav-list.active:hover {
+a.nav-list.active {
   background: #e4eefe;
 }
 
@@ -198,12 +201,10 @@ li.two-cols {
 }
 
 li.eighty-percent {
-  width:80%;
+  width:95%;
 }
 
 li.box-display {
-  border: 1px solid #d5d7db;
-  border-radius: 10px;
   margin:10px;
 }
 

@@ -1,5 +1,4 @@
-import {Component, Inject, Input, OnInit} from '@angular/core';
-import {ContentBoxModel} from "../../model/content-box.model";
+import {Component, OnInit} from '@angular/core';
 import {ContentBoxProperties} from "../../../lib/content-box/src/content-box.properties";
 
 @Component({
