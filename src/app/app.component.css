@@ -91,7 +91,7 @@ a:visited {
   margin:0 -8px 0 -8px;
   position:-webkit-sticky;
   position:sticky;
-  top:8px;
+  top:0px;
   background: #fff;
   z-index: 10;
 }
@@ -321,7 +321,7 @@ a.box-link:hover {
     /*width:100%;*/
     padding:0 0 0 20px;
   }
-  
+
   .main-content {
     padding:25px 0 0 0;
   }

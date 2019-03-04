@@ -1,4 +1,4 @@
-<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>
 <div class="header display-flex flex-align-center">
   <div class="company-logo">
     <img src="/assets/images/google-account-logo.png" />
@@ -14,8 +14,5 @@
       <router-outlet></router-outlet>
     </div>
   </div>
-  <!--<div class="right-side-container">-->
-    <!--&nbsp;-->
-  <!--</div>-->
 </div>
 <div class="clearer">&nbsp;</div>

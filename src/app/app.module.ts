@@ -13,7 +13,7 @@ import { DataAndPersonalizationComponent } from './data-and-personalization/data
 
 import { NavigationModel } from '../model/navigation.model';
 import {ContentBoxModule} from "../../lib/content-box";
-import {MatProgressBarModule} from "@angular/material";
+import { MatButtonModule, MatCardModule, MatProgressBarModule, MatToolbarModule } from '@angular/material';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 export const navigation: NavigationModel[] = [
@@ -34,8 +34,11 @@ export const navigation: NavigationModel[] = [
     AppRoutingModule,
     HttpClientModule,
     ContentBoxModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
     MatProgressBarModule,
-    BrowserAnimationsModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
