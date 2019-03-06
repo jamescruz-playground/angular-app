@@ -15,6 +15,7 @@ import { NavigationModel } from '../model/navigation.model';
 import {ContentBoxModule} from "../../lib/content-box";
 import { MatButtonModule, MatCardModule, MatProgressBarModule, MatToolbarModule } from '@angular/material';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MainHeaderModule} from "../../lib/main-header";
 
 export const navigation: NavigationModel[] = [
     {icon: '/assets/ico/home.png', activeicon: '/assets/ico/home-active.png', label: 'Home', name: 'Root', path: 'home', component: HomeComponent },
@@ -38,7 +39,8 @@ export const navigation: NavigationModel[] = [
     MatToolbarModule,
     MatProgressBarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MainHeaderModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

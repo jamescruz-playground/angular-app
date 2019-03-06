@@ -16,8 +16,6 @@ export class ContentBoxComponent implements OnInit {
   @ViewChild('box') box;
   xlicon: boolean;
   ricon: boolean;
-  screenHeight: any;
-  screenWidth: any;
 
   ngOnInit() {
       this.xlicon = false;
@@ -25,8 +23,8 @@ export class ContentBoxComponent implements OnInit {
       this.onResize();
   }
 
-  @HostListener('window:resize', ['$resizeEvent'])
-  onResize(resizeEvent?) {
+  @HostListener('window:resize', [])
+  onResize() {
       console.log(Math.ceil(this.box.nativeElement.clientWidth / window.innerWidth * 100)) ;
       if ((window.innerWidth <= TABLET_SCREEN_WIDTH && window.innerWidth >= TABLET_SCREEN_WIDTH_B ) || (window.innerWidth <= MOBILE_SCREEN_WIDTH && window.innerWidth >= MOBILE_SCREEN_WIDTH_B)) {
           this.ricon = false;
@@ -35,7 +33,5 @@ export class ContentBoxComponent implements OnInit {
           this.ricon = true;
           this.xlicon = false;
       }
-      this.screenHeight = window.innerHeight;
-      this.screenWidth = window.innerWidth;
   }
 }

@@ -1,7 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, HostListener} from '@angular/core';
 import { NavigationModel } from '../../model/navigation.model';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
+
+const TABLET_SCREEN_WIDTH = 1070;
 
 @Component({
   selector: 'app-side-bar-item',
@@ -22,5 +24,4 @@ export class SideBarItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

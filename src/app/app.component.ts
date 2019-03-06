@@ -1,8 +1,6 @@
-import {Component, Inject, Input, Output, EventEmitter} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {Event, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
 import {NavigationModel} from '../model/navigation.model';
-// import {MatProgressBarModule} from '@angular/material/progress-bar';
-// import {ProgressAnimationEnd} from "@angular/material/progress-bar";
 
 @Component({
   selector: 'app-root',
@@ -10,8 +8,6 @@ import {NavigationModel} from '../model/navigation.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // // @Input() progressbar: MatProgressBarModule;
-  // @Output() animationEnd: EventEmitter<ProgressAnimationEnd>;
   loading = false;
 
   constructor(
@@ -26,7 +22,7 @@ export class AppComponent {
           case event instanceof NavigationEnd:
           case event instanceof NavigationCancel:
           case event instanceof NavigationError:
-                this.loading = false;
+            this.loading = false;
             break;
       }
     });
